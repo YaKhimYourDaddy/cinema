@@ -1,4 +1,4 @@
-(at preFinal dir)
+(at pbl2 dir)
 delete directory build before go on
 mkdir build
 cd build

@@ -1,6 +1,6 @@
 CMakeFiles/pbl2.dir/src/Controller/DB_Helper.cpp.obj: \
- C:\Users\admin\Desktop\cmake\src\Controller\DB_Helper.cpp \
- C:\Users\admin\Desktop\cmake\src\Controller\DB_Helper.h \
+ C:\Users\admin\Desktop\pbl2\src\Controller\DB_Helper.cpp \
+ C:\Users\admin\Desktop\pbl2\src\Controller\DB_Helper.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \

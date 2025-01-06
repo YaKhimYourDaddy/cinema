@@ -18,12 +18,12 @@ string Controller::viewDatetimeFor(string movieId)
 
     ostringstream oss;
     oss << "Showtimes for movie: " << mov->getName() << endl;
-    oss << setw(10) << left << "idShowtime"
+    oss << setw(20) << left << "idShowtime"
         << setw(20) << "Date-Time" << endl;
 
     for (Showtime *sho : showtimesOfMovie)
     {
-        oss << setw(10) << sho->getIdShowtime()
+        oss << setw(20) << sho->getIdShowtime()
             << setw(20) << sho->getOnScreenDateTime() << endl;
     }
     return oss.str();

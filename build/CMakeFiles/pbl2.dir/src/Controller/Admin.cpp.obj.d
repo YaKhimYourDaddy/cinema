@@ -1,6 +1,6 @@
 CMakeFiles/pbl2.dir/src/Controller/Admin.cpp.obj: \
- C:\Users\admin\Desktop\cmake\src\Controller\Admin.cpp \
- C:\Users\admin\Desktop\cmake\src\Controller\Admin.h \
+ C:\Users\admin\Desktop\pbl2\src\Controller\Admin.cpp \
+ C:\Users\admin\Desktop\pbl2\src\Controller\Admin.h \
  C:/msys64/ucrt64/include/c++/13.2.0/fstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \

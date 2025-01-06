@@ -83,6 +83,6 @@ string Ticket_Management::nextId(string current_highest)
     int number = stoi(number_str);
     number++;
     ostringstream oss;
-    oss << prefix << setw(11) << setfill('0') << number;
+    oss << prefix << setw(9) << setfill('0') << number;
     return oss.str();
 }

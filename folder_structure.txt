@@ -11,56 +11,56 @@ C:.
 │       
 ├───build
 └───src
-    │   main.cpp
-    ├───Controller
-    │       Account_Management.cpp
-    │       Account_Management.h
-    │       Admin.cpp
-    │       Admin.h
-    │       Controller.cpp
-    │       Controller.h
-    │       DB_Helper.cpp
-    │       DB_Helper.h
-    │       LinkedList.h
-    │       Messages.cpp
-    │       Movie_Management.cpp
-    │       Movie_Management.h
-    │       Room_Management.cpp
-    │       Room_Management.h
-    │       Seat_Management.cpp
-    │       Seat_Management.h
-    │       Showtime_Management.cpp
-    │       Showtime_Management.h
-    │       Ticket_Management.cpp
-    │       Ticket_Management.h 
-    └───View
-    │       DisplayManager.cpp
-    │       DisplayManager.h
-    ├───Database                            // thư mục lưu trữ các file dữ liệu
-    │   │   Account.txt                     // file lưu trữ thông tin Khách hàng
-    │   │   Admin.txt                       // file lưu trữ mật khẩu truy cập Quản trị viên
-    │   │   Movie.txt                       // file lưu trữ thông tin Phim
-    │   │   Room.txt                        // file lưu trữ thông tin Phòng chiếu
-    │   │   Seat.txt                        // file lưu trữ thông tin Ghế ngồi
-    │   │   Showtime.txt                    // file lưu trữ thông tin Lịch chiếu
-    │   │   Ticket.txt                      // file lưu trữ thông tin Vé
-    │   └───Backup                          // thư mục chứa các file dữ liệu sao lưu
-    ├───Model                               // thư mục chứa các source file và header file của các lớp đối tượng dành cho dữ liệu
-    │       Account.cpp                     // Lớp Tài khoản Khách hàng
-    │       Account.h                       
-    │       Comparable.cpp                  // Interface được kế thừa bởi các lớp trong folder Model trừ DateTime 
-    │       Comparable.h                    // giúp triển khai tính đa hình nhằm sử dụng template LinkedList được linh hoạt hơn
-    │       DateTime.cpp                    // Lớp Ngày Giờ phục vụ việc xử lý các dữ liệu liên quan đến thời gian
-    │       DateTime.h                      // và đảm bảo tính hợp lý về thời gian giữa các Lịch chiếu
-    │       Movie.cpp                       // Lớp Phim
-    │       Movie.h
-    │       Room.cpp                        // Lớp Phòng chiếu
-    │       Room.h
-    │       Seat.cpp                        // Lớp Ghế ngồi
-    │       Seat.h
-    │       Showtime.cpp                    // Lớp Phòng chiếu
-    │       Showtime.h
-    │       Ticket.cpp                      // Lớp Vé
-    │       Ticket.h
-
+    ├───Database                // Thư mục lưu trữ các file dữ liệu
+    │   │   Account.txt         // File lưu trữ thông tin Khách hàng
+    │   │   Admin.txt           // File lưu trữ mật khẩu truy cập Quản trị viên là "admin"
+    │   │   Movie.txt           // File lưu trữ thông tin Phim
+    │   │   Room.txt            // File lưu trữ thông tin Phòng chiếu
+    │   │   Seat.txt            // File lưu trữ thông tin Ghế ngồi
+    │   │   Showtime.txt        // File lưu trữ thông tin Lịch chiếu
+    │   │   Ticket.txt          // File lưu trữ thông tin Vé
+    │   └───Backup              // Thư mục chứa các file dữ liệu sao lưu
+    ├───Model                   // TThư mục chứaa các lớp đối tượng dành cho dữ liệu
+    │       Account.cpp         // Lớp Tài khoản lưu trữ thông tin Khách hàng
+    │       Account.h           // gồm tên tài khoản (username/idAccount), mật khẩu, tên khách hàng
+    │       Comparable.cpp      // Interface được kế thừa bởi các lớp trong folder Model trừ DateTime 
+    │       Comparable.h        // giúp triển khai tính đa hình nhằm sử dụng template LinkedList được linh hoạt hơn
+    │       DateTime.cpp        // Lớp Ngày Giờ phục vụ việc xử lý các dữ liệu liên quan đến thời gian
+    │       DateTime.h          // và đảm bảo tính hợp lý về thời gian giữa các Lịch chiếu
+    │       Movie.cpp           // Lớp Phim
+    │       Movie.h             // gồm ID Phim, tên phim, thời lượng
+    │       Room.cpp            // Lớp Phòng chiếu
+    │       Room.h              // gồm ID Phòng chiếu, tên phòng chiếu
+    │       Seat.cpp            // Lớp Ghế ngồi
+    │       Seat.h              // gồm ID Ghế ngồi, ID Phòng chiếu, vị trí cột, vị trí hàng 
+    │       Showtime.cpp        // Lớp Lịch chiếu
+    │       Showtime.h          // gồm ID Lịch chiếu, ID Phim, ID Phòng chiếu, thời điểm chiếu
+    │       Ticket.cpp          // Lớp Vé
+    │       Ticket.h            //
+    ├───Controller                  // Thư mục chứa các lớp Quản lí các đối tượng và dữ liệu
+    │       Controller.cpp          // Lớp Controller
+    │       Controller.h            //
+    │       DB_Helper.cpp           // Lớp Hỗ trợ Cơ sở dữ liệu giúp truy xuất, thay đổi dữ liệu
+    │       DB_Helper.h             // cho các lớp Quản lí
+    │       LinkedList.h            // Template Danh sách liên kết đơn
+    │       Messages.cpp            // File lưu trữ các chuỗi kí tự nhằm tiện sử dụng
+    │       Admin.cpp               // Lớp Quản trị viên 
+    │       Admin.h                 // có vai trò xác thực quyền truy cập hệ thống của Quản trị viên
+    │       Account_Management.cpp  // Lớp Quản lí Tài Khoản
+    │       Account_Management.h    // 
+    │       Movie_Management.cpp    // Lớp Quản lí Phim
+    │       Movie_Management.h      //
+    │       Room_Management.cpp     // Lớp Quản lí Phòng chiếu
+    │       Room_Management.h       //
+    │       Seat_Management.cpp     // Lớp Quản lí Ghế ngồi
+    │       Seat_Management.h       //
+    │       Showtime_Management.cpp // Lớp Quản lí Lịch chiếu
+    │       Showtime_Management.h   //
+    │       Ticket_Management.cpp   // Lớp Quản lí Vé
+    │       Ticket_Management.h     //
+    └───View                        // Thư mục chứa lớp Quản lí Hiển thị
+    │       DisplayManager.cpp      // Lớp Quản lí Hiển thị thực hiện việc trình bày giao diện
+    │       DisplayManager.h        // tương ứng với yêu cầu từ người dùng và phản hồi từ Controller
+    │   main.cpp                    
+    
             
