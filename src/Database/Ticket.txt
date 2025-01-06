@@ -1,0 +1,9 @@
+idTicket|idShowTime|idSeat|idOrder
+idTicket000000001|idShowtime0000001|idSeat0001|khiem1|02/01/2025-10:00
+idTicket000000002|idShowtime0000001|idSeat0002|khiem1|02/01/2025-10:01
+idTicket000000003|idShowtime0000001|idSeat0003|khiem2|02/01/2025-10:02
+idTicket000000004|idShowtime0000051|idSeat0401|khiem1|02/01/2025-10:03
+idTicket000000005|idShowtime0000002|idSeat0004|khiem2|02/01/2025-10:04
+idTicket000000006|idShowtime0000002|idSeat0005|khiem3|02/01/2025-10:05
+idTicket000000007|idShowtime0000002|idSeat0006|khiem4|02/01/2025-10:06
+idTicket000000008|idShowtime0000002|idSeat0007|khiem5|02/01/2025-10:07

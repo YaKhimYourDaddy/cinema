@@ -1,0 +1,7 @@
+(at preFinal dir)
+delete directory build before go on
+mkdir build
+cd build
+cmake .. -G "MinGW Makefiles"
+mingw32-make
+.\pbl2

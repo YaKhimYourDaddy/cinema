@@ -1,0 +1,66 @@
+Folder PATH listing
+Volume serial number is 26DE-CFDF
+C:.
+│   baocao.docx
+│   CMakeLists.txt
+│   folder_structure.txt
+│   way_to_build.txt
+│   
+├───.vscode
+│       settings.json
+│       
+├───build
+└───src
+    │   main.cpp
+    ├───Controller
+    │       Account_Management.cpp
+    │       Account_Management.h
+    │       Admin.cpp
+    │       Admin.h
+    │       Controller.cpp
+    │       Controller.h
+    │       DB_Helper.cpp
+    │       DB_Helper.h
+    │       LinkedList.h
+    │       Messages.cpp
+    │       Movie_Management.cpp
+    │       Movie_Management.h
+    │       Room_Management.cpp
+    │       Room_Management.h
+    │       Seat_Management.cpp
+    │       Seat_Management.h
+    │       Showtime_Management.cpp
+    │       Showtime_Management.h
+    │       Ticket_Management.cpp
+    │       Ticket_Management.h 
+    └───View
+    │       DisplayManager.cpp
+    │       DisplayManager.h
+    ├───Database                            // thư mục lưu trữ các file dữ liệu
+    │   │   Account.txt                     // file lưu trữ thông tin Khách hàng
+    │   │   Admin.txt                       // file lưu trữ mật khẩu truy cập Quản trị viên
+    │   │   Movie.txt                       // file lưu trữ thông tin Phim
+    │   │   Room.txt                        // file lưu trữ thông tin Phòng chiếu
+    │   │   Seat.txt                        // file lưu trữ thông tin Ghế ngồi
+    │   │   Showtime.txt                    // file lưu trữ thông tin Lịch chiếu
+    │   │   Ticket.txt                      // file lưu trữ thông tin Vé
+    │   └───Backup                          // thư mục chứa các file dữ liệu sao lưu
+    ├───Model                               // thư mục chứa các source file và header file của các lớp đối tượng dành cho dữ liệu
+    │       Account.cpp                     // Lớp Tài khoản Khách hàng
+    │       Account.h                       
+    │       Comparable.cpp                  // Interface được kế thừa bởi các lớp trong folder Model trừ DateTime 
+    │       Comparable.h                    // giúp triển khai tính đa hình nhằm sử dụng template LinkedList được linh hoạt hơn
+    │       DateTime.cpp                    // Lớp Ngày Giờ phục vụ việc xử lý các dữ liệu liên quan đến thời gian
+    │       DateTime.h                      // và đảm bảo tính hợp lý về thời gian giữa các Lịch chiếu
+    │       Movie.cpp                       // Lớp Phim
+    │       Movie.h
+    │       Room.cpp                        // Lớp Phòng chiếu
+    │       Room.h
+    │       Seat.cpp                        // Lớp Ghế ngồi
+    │       Seat.h
+    │       Showtime.cpp                    // Lớp Phòng chiếu
+    │       Showtime.h
+    │       Ticket.cpp                      // Lớp Vé
+    │       Ticket.h
+
+            

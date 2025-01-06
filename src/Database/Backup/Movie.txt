@@ -1,0 +1,7 @@
+idMovie|name|duration
+idMovie0001|The Shawshank Redemption|175
+idMovie0002|The Dark Knight|152
+idMovie0003|The Godfather: Part II|202
+idMovie0004|12 Angry Men|96
+idMovie0005|Inception|130
+idMovie0006|Fight Club|110
