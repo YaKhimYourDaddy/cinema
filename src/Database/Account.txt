@@ -1,0 +1,6 @@
+username|password|name
+khiem1|khiem2|khiem1
+khiem2|khiem2|khiem2
+khiem3|khiem3|khiem3
+khiem4|khiem4|khiem4
+khiem5|khiem5|khiem5

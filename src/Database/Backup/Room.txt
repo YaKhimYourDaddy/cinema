@@ -1,0 +1,6 @@
+idRoom|roomName
+idRoom01|Room 1
+idRoom02|Room 2
+idRoom03|Room 3
+idRoom04|Room 4
+idRoom05|Room 5

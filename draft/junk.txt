@@ -1,0 +1,19 @@
+string Controller::viewAllShowtime()
+{
+    // ostringstream oss;
+    // oss << setw(20) << left << "idShowtime" << "|"
+    //     << setw(15) << "idMovie" << setw(40) << "name Movie" << setw(10) << "duration" << "|"
+    //     << setw(10) << "idRoom" << setw(10) << "name Room"
+    //     << setw(20) << "onScreenDateTime" << endl;
+    // vector<Showtime *> all = showtimeManagement->showtimes.toVector();
+    // for (Showtime *sho : all)
+    // {
+    //     Movie *mov = showtimeManagement->getMovie(movieManagement, sho);
+    //     Room *roo = showtimeManagement->getRoom(roomManagement, sho);
+    //     oss << setw(20) << left << sho->getIdShowtime() << "|"
+    //         << setw(15) << mov->getIdMovie() << setw(40) << mov->getName() << setw(10) << mov->getDuration() << "|"
+    //         << setw(10) << roo->getIdRoom() << setw(10) << roo->getName() << "|"
+    //         << setw(20) << sho->getOnScreenDateTime() << endl;
+    // }
+    // return oss.str();
+}

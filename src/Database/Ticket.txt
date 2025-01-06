@@ -1,0 +1,2 @@
+idTicket|idShowTime|idSeat|idOrder
+idTicket000000004|idShowtime0000051|idSeat0401|khiem1|02/01/2025-10:03
