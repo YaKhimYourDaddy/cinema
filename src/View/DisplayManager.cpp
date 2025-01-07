@@ -80,8 +80,6 @@ bool DisplayManager::getUpdateChoice(const string &fieldName)
 {
     cout << "Do you want to update " << fieldName << "? (Enter '1' for yes, '0' for no): ";
     string input;
-    cin.ignore();
-    // getline(cin, input);
     cin >> input;
     return input == "1";
 }
@@ -278,13 +276,13 @@ void DisplayManager::manageMovie(string msg)
         viewAllMovie(ctl->viewAllMovie());
         break;
     case 2:
-        addMovie();
+        addMovie(ctl->viewAllMovie());
         break;
     case 3:
-        updateMovie();
+        updateMovie(ctl->viewAllMovie());
         break;
     case 4:
-        removeMovie();
+        removeMovie(ctl->viewAllMovie());
         break;
     default:
         manageMovie();
@@ -313,7 +311,10 @@ void DisplayManager::addMovie(string msg)
     cout << msg << endl;
     cout << "Enter movie details (or '0' to return):\n";
 
-    string name = getInput("Movie name: ");
+    string name;
+    cout << "Movie name: ";
+    cin.ignore();
+    getline(cin, name);
     if (isBackOption(name))
         manageMovie();
 
@@ -333,25 +334,30 @@ void DisplayManager::updateMovie(string msg)
     cout << "Enter movie details (or '0' to return):\n";
 
     string name = NO_CHANGE;
-    string duration = NO_CHANGE;
+    int durationInt = -1;
+    string durationStr = NO_CHANGE;
     string idMovie = getInput("Movie ID to update: ");
     if (isBackOption(idMovie))
         manageMovie();
     if (getUpdateChoice("name"))
     {
-        name = getInput("New movie name: ");
+        cout << "New name: ";
+        cin.ignore();
+        getline(cin, name);
         if (isBackOption(name))
             manageMovie();
     }
 
     if (getUpdateChoice("duration"))
     {
-        duration = getInput("New duration (minutes): ");
-        if (isBackOption(duration))
+        cout << "New duration (minutes): ";
+        cin >> durationInt;
+        durationStr = to_string(durationInt);
+        if (isBackOption(durationStr))
             manageMovie();
     }
 
-    string response = ctl->updateMovie(idMovie, name, duration);
+    string response = ctl->updateMovie(idMovie, name, durationStr);
     manageMovie(response);
 }
 
@@ -391,13 +397,13 @@ void DisplayManager::manageShowtime(string msg)
         viewAllShowtime(ctl->viewAllShowtime());
         break;
     case 2:
-        addShowtime();
+        addShowtime(ctl->viewAllMovie());
         break;
     case 3:
-        updateShowtime();
+        updateShowtime(ctl->viewAllMovie());
         break;
     case 4:
-        removeShowtime();
+        removeShowtime(ctl->viewAllMovie());
         break;
     default:
         manageShowtime();

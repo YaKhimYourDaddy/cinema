@@ -46,4 +46,4 @@
 #define NOT_SIGNED_IN_YET "NOT_SIGNED_IN_YET"
 #define BOOKING_SUCCESSFUL "BOOKING SUCCESSFUL"
 #define NO_SHOWTIMES_AVAILABLE_FOR_THIS_MOVIE "No showtimes available for this movie."
-#define CONFLICT_ON_SCREEN_DATETIME "Conflict on screen datetime."
+#define SHOWTIME_ERROR "Conflict on screen datetime/Can't find Movie/Room/Invalid format datetime."

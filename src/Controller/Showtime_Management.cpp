@@ -8,11 +8,11 @@ bool Showtime_Management::isValid(Movie_Management *mm, string idMovie, string i
 {
     // vector<Showtime *> conflict;
     vector<Showtime *> allSho = showtimes.toVector();
-    DateTime adding;
     Movie *addingMov = mm->getByIdMovie(idMovie);
     if (addingMov == nullptr)
         return false;
     int addingDuration = stoi(addingMov->getDuration());
+    DateTime adding;
     if (adding.setDateTime(onSreenDateTime) == false)
         return false;
     for (Showtime *sho : allSho)
@@ -24,7 +24,7 @@ bool Showtime_Management::isValid(Movie_Management *mm, string idMovie, string i
             continue;
         if (sho->getIdRoom() != idRoom)
             continue;
-        if ((adding < added && added.isInMiddle(adding, addingDuration)) || (adding > added) && adding.isInMiddle(added, addedDuration))
+        if (added.isInMiddle(adding, addingDuration) || adding.isInMiddle(added, addedDuration))
         {
             return false;
         }

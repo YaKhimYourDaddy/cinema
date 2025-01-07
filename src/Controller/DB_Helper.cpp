@@ -1,25 +1,57 @@
 #include "DB_Helper.h"
 DB_Helper::DB_Helper(const string &path) : file_path(path) {}
-void DB_Helper::delete_line(size_t index) {
+// void DB_Helper::delete_line(size_t index) {
+//     vector<string> lines;
+//     string line;
+//     ifstream file(file_path);
+//     while (getline(file, line))
+//     {
+//         lines.push_back(line);
+//     }
+//     file.close();
+//     if (index < lines.size() && index > 0)
+//     {
+//         lines.erase(lines.begin() + index);
+//         ofstream outFile(file_path);
+//         for (const auto &l : lines)
+//         {
+//             outFile << l << '\n';
+//         }
+//     }
+// }
+void DB_Helper::delete_line(size_t index)
+{
     vector<string> lines;
     string line;
     ifstream file(file_path);
+
+    // Đọc toàn bộ các dòng từ file
     while (getline(file, line))
     {
         lines.push_back(line);
     }
     file.close();
-    if (index < lines.size() && index > 0)
+
+    // Kiểm tra index hợp lệ và xóa dòng
+    if (index < lines.size())
     {
         lines.erase(lines.begin() + index);
+
+        // Ghi các dòng còn lại vào file
         ofstream outFile(file_path);
-        for (const auto &l : lines)
+        for (size_t i = 0; i < lines.size(); ++i)
         {
-            outFile << l << '\n';
+            outFile << lines[i];
+            if (i != lines.size() - 1)
+            {
+                outFile << '\n'; // Thêm newline nếu không phải dòng cuối
+            }
         }
     }
 }
-void DB_Helper::update_line(size_t index, const string &new_line) {
+
+void DB_Helper::update_line(size_t index, const string &new_line)
+{
     vector<string> lines;
     string line;
     ifstream file(file_path);
@@ -39,7 +71,8 @@ void DB_Helper::update_line(size_t index, const string &new_line) {
     }
 }
 
-void DB_Helper::append(const string &new_line) {
+void DB_Helper::append(const string &new_line)
+{
     // Open file for both reading and writing, move to end
     fstream file(file_path, ios::in | ios::out | ios::ate);
     if (!file.is_open())
@@ -63,7 +96,8 @@ void DB_Helper::append(const string &new_line) {
     file.close();     // Close the file
 }
 
-int DB_Helper::find_line_starting_with(const string &id) {
+int DB_Helper::find_line_starting_with(const string &id)
+{
     string line;
     ifstream file(file_path);
     int index = 0;

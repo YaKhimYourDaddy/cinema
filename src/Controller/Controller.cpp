@@ -227,6 +227,8 @@ string Controller::updateMovie(string idMovie, string name, string duration)
 {
     Movie *found = movieManagement->find_by_id(idMovie);
     if (found == nullptr)
+        cout << "null";
+    if (found == nullptr)
         return WRONG_ID;
     if (name == NO_CHANGE)
         name = found->getName();
@@ -263,7 +265,7 @@ string Controller::viewAllShowtime()
 string Controller::addShowtime(string idMovie, string idRoom, string onScreenDateTime)
 {
     if (showtimeManagement->isValid(movieManagement, idMovie, idRoom, onScreenDateTime) == false)
-        return CONFLICT_ON_SCREEN_DATETIME;
+        return SHOWTIME_ERROR;
     showtimeManagement->add(idMovie, idRoom, onScreenDateTime);
     return CRUD_SUCCESSFULLY;
 }
@@ -271,7 +273,7 @@ string Controller::addShowtime(string idMovie, string idRoom, string onScreenDat
 string Controller::updateShowtime(string idShowtime, string idMovie, string idRoom, string onScreenDateTime)
 {
     if (showtimeManagement->isValid(movieManagement, idMovie, idRoom, onScreenDateTime) == false)
-        return CONFLICT_ON_SCREEN_DATETIME;
+        return SHOWTIME_ERROR;
     Showtime *found = showtimeManagement->find_by_id(idShowtime);
     if (found == nullptr)
         return WRONG_ID;
